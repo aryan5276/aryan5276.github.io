@@ -1,0 +1,38 @@
+<script>
+    function myFunction() {
+        var input=document.getElementById("mysearch").value;
+        localStorage.setItem("search", input);
+        window.open("page2.html");
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ClassHunt</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="layer">
+            <div class="header">
+                <h1>
+                    Recommended courses for <br>' <span id="search", style="font-style: oblique;"></span> ' :
+                </h1>
+            </div>
+        
+            <script>
+                var input = localStorage.getItem("search");
+                var inp = input.replaceAll(",", "").replaceAll(" ", "_");
+                document.getElementById("search").innerHTML = input;
+                console.log(inp);
+                var link = "https://helloworld-lyiim2vm7a-ue.a.run.app/interests?str=" + inp;
+                console.log(link);
+            </script>
+
+            <div id="loading">Loading...</div>
+
+
+        </div>
+    </body>
+</html>
