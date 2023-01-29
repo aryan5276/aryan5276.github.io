@@ -88,6 +88,19 @@ span:nth-child(7) {
     }
 }
 
+button
+{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #999;
+    margin-top: 15px;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
 
 /*Start of Search*/
 .search
